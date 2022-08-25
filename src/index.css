@@ -1,13 +1,123 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{margin:0;font-family:'Inter',BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-color:var(--body-color)}code{font-family:source-code-pro,Menlo,Monaco,Consolas,'Courier New',monospace}:root{--primary-color:#e9141f;--white-color:#FAFAFA;--dark-color:#222;--success-color:#3ba013;--warning-color:#d6ec09;--body-color:#ddd}.text-primary{color:var(--primary-color)!important}.text-white{color:var(--white-color)!important}.text-dark{color:var(--dark-color)!important}.text-success{color:var(--success-color)!important}.text-warning{color:var(--warning-color)!important}.bg-primary{background-color:var(--primary-color)!important}.bg-white{background-color:var(--white-color)!important}.bg-dark{background-color:var(--dark-color)!important}.bg-success{background-color:var(--success-color)!important}.bg-warning{background-color:var(--warning-color)!important}.bg-body{background-color:var(--body-color)!important}
+
+::selection{
+  background-color: var(--primary-color);
+  color:var(--white-color);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a{
+  color:unset;
+  text-decoration: none;
+}
+
+.header,.header h1{
+  margin: 0;
+}
+
+.header{
+  padding:24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container{
+  margin: 64px 128px;
+  animation: slideIn 500ms;
+}
+
+.yazi-container{
+  width:800px;
+  border-radius:8px;
+  margin: 0;
+  padding: 32px 24px;
+}
+
+.yazi-baslik{
+  color: var(--primary-color);
+  font-size: 32px;
+  margin: 0;
+}
+
+.yazi-aciklama{
+  margin:0;
+  margin-top: 32px;
+  min-height: 100px;
+  font-size: 20px;
+}
+
+.full-aciklama{
+  min-height: 400px;
+}
+
+.container .yazi-container{
+  margin: 12px auto;
+}
+
+@keyframes slideIn {
+  from{
+    transform: translateX(-120%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+.new-text{
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  padding: 16px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.item-create-form{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 64px auto;
+}
+
+.item-create-form label{
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+
+.item-create-form input,
+.item-create-form textarea{
+  padding:8px 20px;
+  border:1px solid #ddd;
+  margin-top:8px;
+  font-size:20px;
+  font-family: 'Inter';
+}
+
+.submit-button{
+  margin-top:12px;
+  padding: 8px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border:none;
+  cursor:pointer;
+}
+
+.card-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete{
+  margin: 0;
+  border-radius: 10px;
+}
+
+.delete svg,
+.delete path{
+  width: 16px;
 }
